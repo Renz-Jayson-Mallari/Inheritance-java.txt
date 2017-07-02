@@ -1,0 +1,1 @@
+// Encapsulation --> also known as data hiding.
