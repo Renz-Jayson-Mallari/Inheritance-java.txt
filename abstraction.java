@@ -109,3 +109,43 @@ Computing payment for this week... the amount is : 865.3846153846154
 Constructing employee ...
 Mailing check to Gene El with the yearly salary of 500000.0
 Computing payment for this week... the amount is : 9615.384615384615
+
+
+/*
+Abstract Methods
+
+If you want a class to contain a particular method but you want the actual implementation of that method to be determined by child classes, you can declare the method in the parent class as an abstract.
+
+    abstract keyword is used to declare the method as abstract.
+
+    You have to place the abstract keyword before the method name in the method declaration.
+
+    An abstract method contains a method signature, but no method body.
+
+    Instead of curly braces, an abstract method will have a semoi colon (;) at the end.
+
+Following is an example of the abstract method.
+Example
+*/
+
+public abstract class Employee {
+   private String name;
+   private String address;
+   private int number;
+   
+   public abstract double computePay();
+   // Remainder of class definition
+}
+
+// abtract cannot use to instanciate . heres the exmaple to overide the abstract class for instanciation.4
+
+/* File name : Salary.java */
+public class Salary extends Employee {
+   private double salary;   // Annual salary
+  
+   public double computePay() {
+      System.out.println("Computing salary pay for " + getName());
+      return salary/52;
+   }
+   // Remainder of class definition
+}
