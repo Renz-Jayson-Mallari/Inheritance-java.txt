@@ -32,4 +32,37 @@ public class MammalDemo implements Animal{
         
     }
 }
+
+//Extending Interfaces example
+
+// Filename: Sports.java
+public interface Sports{
+	
+	public void setHomeTeam(String name);
+	public void setAwayTeam(String name);
+	
+}
+
+//Filename :  Football
+public interface Football extends Sports{
+	
+	public void homeTeamScored(int points);
+	public void vistingTeamScored(int points);
+	public void qtrEnds(int qtr);
+	
+}	
+
+public interface Basketball extendsw Sports{
+	public void homeTeamScored(int points);
+	public void visitingTeamScored(int points);
+	public void endOfTheHalf(int half);
+	public void overTime(int ot);
+}
+
+
+
+	
+	
+	
+	
 	
