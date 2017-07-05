@@ -57,7 +57,14 @@ public interface Basketball extendsw Sports{
 	public void visitingTeamScored(int points);
 	public void endOfTheHalf(int half);
 	public void overTime(int ot);
+
 }
+
+// Extending Multiple Interfaces
+
+//example
+
+public interface Hockey extends Sports, Event
 
 
 
