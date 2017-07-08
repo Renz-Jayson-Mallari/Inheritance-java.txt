@@ -43,3 +43,21 @@ public class MammalInt{
         mal.travel();
     }
 }
+
+/*Set CLASSPATH System Variable
+
+To display the current CLASSPATH variable, use the following commands in Windows and UNIX (Bourne shell) −
+
+    In Windows → C:\> set CLASSPATH
+    In UNIX → % echo $CLASSPATH
+
+To delete the current contents of the CLASSPATH variable, use −
+
+    In Windows → C:\> set CLASSPATH =
+    In UNIX → % unset CLASSPATH; export CLASSPATH
+
+To set the CLASSPATH variable −
+
+    In Windows → set CLASSPATH = C:\users\jack\java\classes
+    In UNIX → % CLASSPATH = /home/jack/java/classes; export CLASSPATH
+*/
