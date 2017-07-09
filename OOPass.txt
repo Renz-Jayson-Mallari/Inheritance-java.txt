@@ -1,0 +1,183 @@
+
+Assignment #5: Research and Explain Object - Oriented Programming
+
+	
+1. Do you research on Object Oriented Programming
+
+2. Explain in your own words what object oriented programming is, provide 3 examples demonstrating that you know what you're talking about.
+
+3. Explain Inheritance, Encapsulation, and Polymorphism, 
+
+
+object oriented programming is putting data and functionality together to use it on our program. 
+	
+	Example1 : Person object
+					data or state
+						-- name
+						-- age
+					funtionality or behavior
+						-- walk
+						-- run
+					
+	Example2 : Car object
+					data or state
+						-- carName
+						-- carMade
+						-- carYear
+					funtionality or behavior
+						-- stop
+						-- move
+						-- dropOffPassenger
+						-- pickUpPassenger
+	
+	Example3 : Animal object
+					data or state
+						-- animalType
+						-- animalName
+						-- animalColor
+					functionality or behavior
+						-- fly
+						-- eat
+						-- run
+						-- sleep
+						-- jump
+				
+					
+Inheritance --> When a class aquire properties ( data and funtionality) from another class.
+
+			example:
+			
+				/************* Super class **************/
+				public class Person{
+					
+					public void speak(){
+						System.out.print("blah blah blah");
+					}
+				}
+				
+				/************* Sub class ***************/
+				public class Teacher extends Person{ 
+				
+					public static void main(String[] args){
+						
+						// instantiate an object
+						Teacher mrPogi = new Teacher();
+						
+						// will output blah blah blah from inheriting the properties of the object person .
+						mrPogi.speak();			
+					}
+				}
+				
+	
+Encapsulation --> (data hiding) the variable of a class will be hidden from the other class, 
+						and can be accessed only through the method of their current class.		
+
+							
+				example :
+				
+				public class Student{
+					private String name;
+					private String studNum;
+					private int age;
+					
+					public String getName(){
+						return name;
+					}
+					
+					public void setName(String name){
+						this.name  = name;
+					}
+					
+					public String getStudNum(){
+						return studNum;
+					}
+					
+					public void setStudNum(String studNum){
+						this.studNum  = studNum;
+					}
+					
+					public Int getAge(){
+						return age;
+					}
+					
+					public void setAge(int age){
+						this.age  = age;
+					}
+										
+				}
+				
+				public class Encapsulation{
+				
+					public static void main(String [] args){
+					
+						Student boy1 = new Student();
+						boy1.setName("Lebron James");
+						boy1.setAge(6);
+						boy1.setStudNum("023cavs017");
+						
+						System.out.println("Identification");
+						System.out.print("Name: " + getName() + "\nAge: " + getAge() + "\nStudent Number: " +getStudNum() ); 
+					}
+				}
+				
+	Polymorphism --> the ability of an object to take many (different) forms..			
+	
+		
+			example: 
+			
+				public class Employee{
+				
+					private String name;
+					private String address;
+					
+						public Employee(String name, String address){
+							this.name = name ;
+							this.address = address;
+						}
+						
+						public String getName(){
+							return name;
+						}
+						
+						public String getAddress(){
+							return address;
+						}
+						
+						public void print(){
+							System.out.print("Name: " + name + "\nAddress: " + address);
+						}
+				}
+				
+				public class Manager extends Employee{
+					public void print(){
+							System.out.println("Name: " + name + "\nAddress: " + address + "\nPosition: Manager");
+						}
+				}
+				
+				public class Supervisor extends Employee{
+					public void print(){
+							System.out.println("Name: " + name + "\nAddress: " + address + "\nPosition: Supervisor");
+						}
+				}
+				
+				public class Polymorphism{
+				
+					public static void main(String [] args){
+						Employee[] ballbank = new Employee[2];
+						ballbank[0] = new Manager("Russell Westbrook", "okc");
+						ballbank[1] =  new Supervisor("Paul George", "Indiana");
+						
+						for(int i=0;i<ballbank.length;i++){
+							ballbank[i].print();
+						}
+					}
+				}
+				
+				This will output 
+					Name: Russell Westbrook
+					Address: okc
+					Position: Manager // this 
+					Name: Paul George
+					Address: Indiana
+					Position: Supervisor // and this change 
+					
