@@ -25,7 +25,7 @@ public class Enumeration{
 		pNames.add("Ian");
 		pNames.add("Renz");
 		pNames.add("Jayson");
-		pNames.add("Izzy");
+		pNames.add("Izzyabelle");
 		
 		names = pNames.elements();
 		
